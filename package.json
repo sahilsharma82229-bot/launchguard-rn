@@ -1,0 +1,21 @@
+{
+  "name": "launchguard-rn",
+  "version": "0.1.0",
+  "description": "Pre-launch safety, security, crash-risk and store-readiness scanner for React Native / Expo apps.",
+  "bin": { "launchguard-rn": "dist/index.js" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "scan": "tsx src/index.ts .",
+    "check": "npm run build"
+  },
+  "keywords": ["react-native", "expo", "security", "firebase", "play-store", "scanner", "cli"],
+  "author": "Sahil Sharma",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
