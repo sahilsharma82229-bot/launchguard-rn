@@ -35,7 +35,7 @@ npm run dev -- .
 Scan another app:
 
 ```bash
-npm run dev -- C:/Users/sahil/Documents/Nutricise
+npm run dev -- C:/Users/yourname/Documents/my-expo-app
 ```
 
 Save report somewhere else:
