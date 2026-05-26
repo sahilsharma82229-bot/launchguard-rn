@@ -1,87 +1,111 @@
+Paste this into README:
+
+````markdown
 # LaunchGuard RN
 
-**Pre-launch safety scanner for React Native and Expo apps.**
+A free CLI tool that audits React Native and Expo apps before launch.
 
-LaunchGuard RN checks your app before release and generates a simple launch-readiness score with exact fix prompts for Codex, Claude, Cursor, or any AI coding agent.
+It checks for common problems that can hurt app stability, security, Play Store readiness, and developer confidence.
 
 ## What it checks
 
-- Hardcoded API keys and secrets
-- Firebase rule risks
-- Missing error boundaries
-- Network calls without safe error handling
-- Permission/privacy store-readiness issues
-- Missing CI setup
-- Missing README/project docs
-- Crash-risk patterns
-- Play Store readiness gaps
-- Fix prompts for AI coding tools
+- Exposed secrets and API keys
+- Firebase-related risk patterns
+- Crash-prone code patterns
+- Missing error handling
+- Android permission concerns
+- React Native / Expo project structure
+- Package and dependency signals
+- TypeScript project readiness
+- Launch-readiness checklist gaps
+- Basic security and safety issues
 
-## Install
+## Why this exists
+
+Many mobile apps fail at launch because of small hidden problems:
+
+- exposed keys
+- unsafe Firebase setup
+- missing loading/error states
+- bad permissions
+- crash risks
+- incomplete release checks
+
+LaunchGuard RN gives developers a simple report before they ship.
+
+## Install locally
 
 ```bash
 npm install
 npm run build
-```
+````
 
-## Use locally
+## Usage
 
 Scan the current folder:
 
 ```bash
-npm run dev -- .
+node dist/index.js .
 ```
 
-Scan another app:
+Scan another React Native or Expo app:
 
 ```bash
-npm run dev -- C:/Users/yourname/Documents/my-expo-app
-```
-
-Save report somewhere else:
-
-```bash
-npm run dev -- ./my-app --out ./report.md
-```
-
-## Future one-command usage
-
-After publishing to npm:
-
-```bash
-npx launchguard-rn ./my-app
+node dist/index.js C:/Users/yourname/Documents/my-expo-app
 ```
 
 ## Example output
 
-```txt
-LaunchGuard RN score: 72/100
-Findings: 4
-Report saved: launchguard-report.md
+```text
+LaunchGuard RN Report
+
+Score: 78/100
+
+Warnings:
+- Possible exposed API key found
+- Android permissions should be reviewed
+- Firebase config detected, verify security rules
+- Missing production readiness checklist
 ```
 
-## Why this exists
+## GitHub Actions
 
-Before launching an app, developers worry about crashes, exposed keys, Firebase mistakes, weak privacy setup, and app-store rejection. LaunchGuard RN gives a fast first-pass audit and fix plan.
-
-It does **not** replace professional security review, manual QA, or real device testing.
+This repo includes a basic CI workflow to make sure the project builds successfully.
 
 ## Roadmap
 
-- Expo config audit
-- AndroidManifest permission scanner
-- Bundle size analyzer
-- Unused assets detector
-- Accessibility checks
-- Navigation anti-pattern detector
-- Offline readiness checker
-- GitHub PR comment bot
-- HTML report
-- SARIF output for GitHub Security tab
+* Better Firebase security audit
+* Better Expo config checks
+* JSON report output
+* HTML report output
+* GitHub Actions scanner mode
+* More security rules
+* More crash-risk detection
+* AI fix-prompt generator
+* Play Store readiness score
+* Accessibility checks
+
+## Who is this for?
+
+* React Native developers
+* Expo developers
+* Indie app builders
+* Student developers
+* Small teams preparing for launch
+* Developers who want a quick safety check before release
 
 ## Contributing
 
-Pull requests are welcome. Keep checks practical, explain why each issue matters, and include a fix prompt.
+Contributions are welcome.
+
+Good first issues:
+
+* Add new scanner rule
+* Improve report formatting
+* Add Expo-specific checks
+* Add Firebase rule examples
+* Add test cases
+* Improve documentation
 
 ## License
 
