@@ -1,17 +1,18 @@
 # LaunchGuard RN Report
 
+**Project:** Example React Native app
 **Launch Readiness Score:** 72/100
 
 ## Finding Example
 
-### Possible hardcoded secret/API key
-**Severity:** critical
+### Supabase detected but RLS/policy evidence not found
+**Severity:** high
 
-**Why it matters:** Hardcoded secrets can be copied from public repos or app bundles.
+**Why it matters:** Supabase projects need Row Level Security and policies to prevent cross-user data leaks.
 
-**Fix:** Move secrets to backend, CI secrets, Firebase Remote Config, or secure environment handling.
+**Fix:** Enable RLS on every user-data table and create least-privilege policies.
 
-**Codex Prompt:**
+**Codex / Claude / Cursor Prompt:**
 ```
-Scan this repo for hardcoded secrets/API keys. Move them to safe configuration, add .env examples, and ensure no real secret is committed.
+Audit Supabase usage. Add a checklist and SQL examples for enabling RLS, owner-scoped policies, safe anon key usage, and public bucket review.
 ```
