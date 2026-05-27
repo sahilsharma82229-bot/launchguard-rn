@@ -1,11 +1,19 @@
-Paste this into README:
-
-````markdown
 # LaunchGuard RN
 
-A free CLI tool that audits React Native and Expo apps before launch.
+CLI tool to audit React Native and Expo apps for security risks, backend misconfigurations, crash risks, privacy gaps, and launch readiness.
 
-It checks for common problems that can hurt app stability, security, Play Store readiness, and developer confidence.
+![GitHub Actions](https://github.com/sahilsharma82229-bot/launchguard-rn/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-CLI-blue)
+![React Native](https://img.shields.io/badge/React%20Native-Expo-green)
+
+## Quick links
+
+- [Example report](docs/example-report.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
 
 ## What it checks
 
