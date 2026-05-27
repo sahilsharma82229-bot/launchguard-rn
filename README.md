@@ -68,6 +68,12 @@ Warnings:
 - Missing production readiness checklist
 ```
 
+## Example report
+
+See a sample audit report here:
+
+[Example LaunchGuard RN Report](docs/example-report.md)
+
 ## GitHub Actions
 
 This repo includes a basic CI workflow to make sure the project builds successfully.
